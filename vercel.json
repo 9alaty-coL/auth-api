@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "auth-api",
   "builds": [
     {
       "src": "./source/index.js",
