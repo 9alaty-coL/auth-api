@@ -45,8 +45,8 @@ class AuthController{
         const username = req.body?.username
         const password = req.body?.password
         const name = req.body?.name
-        const avatar = "https://shop.phuongdonghuyenbi.vn/wp-content/uploads/avatars/1510/default-avatar-bpthumb.png"
-        
+        const avatar = req.body?.avatar ?? "https://shop.phuongdonghuyenbi.vn/wp-content/uploads/avatars/1510/default-avatar-bpthumb.png"
+
         const saltRounds = 12;
         const salt = bcrypt.genSaltSync(saltRounds);
         const hashPw = bcrypt.hashSync(password, salt);
