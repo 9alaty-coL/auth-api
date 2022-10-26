@@ -6,7 +6,9 @@ const PORT = 3000;
 
 //  Enable CORS on Server
 let cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+}));
 
 // Read body post
 app.use(
